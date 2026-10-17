@@ -3,5 +3,11 @@
   "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "rewrites": [{ "source": "/((?!api).*)", "destination": "/index.html" }]
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://stackoverflow-backend-1-uft2.onrender.com/api/:path*"
+    },
+    { "source": "/((?!api).*)", "destination": "/index.html" }
+  ]
 }
